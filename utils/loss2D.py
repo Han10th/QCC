@@ -67,7 +67,7 @@ def detD2d(device, H, W):
     h, w = H-1, W-1
     hstep, wstep = 2/h, 2/w
     step = torch.tensor([wstep, hstep]).to(device=device)
-    relu = torch.nn.ReLU()
+    relu =torch.nn.ReLU()
     def detD_loss(mapping):
         """
         Inputs:
