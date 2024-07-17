@@ -145,7 +145,7 @@ if __name__ == '__main__':
     args = get_args()
     args.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     torch.backends.cudnn.benchmark = True
-    Recorder = QccRecorder(args, 'OSAshape/', ["Total","MAIN","QC","LAP"])
+    Recorder = QccRecorder(args, '../Result/OSAshape/', ["Total","MAIN","QC","LAP"])
 
     Estimator = UNet2D(n_input=5, n_output=2, depth_down=args.depth_down, depth_hidden=args.depth_hidden, IsSeg=True)
     Descriptor = UNet2D(n_input=5, n_output=16, depth_down=args.depth_down, depth_hidden=args.depth_hidden, IsSeg=False)
